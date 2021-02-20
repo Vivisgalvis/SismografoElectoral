@@ -1,0 +1,112 @@
+/*---------- Estilos Menu ----------*/
+
+body {
+    margin: 0;
+  }
+  .burger-menu {
+    margin: 40px 0 0 40px;
+  }
+  
+  .burger-menu .menu-check {
+    display: none;
+  }
+  /* circulo verde menu */
+  .burger-menu .menu-open {
+    border: 2px solid #6BAC5F;
+    padding: 30px 40px;
+    border-radius: 100%;
+    position: relative;
+    background: #6BAC5F;
+    box-shadow: 1px 1px 3px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* Menu Hamburguesa OJO SPAN */
+  .burger-menu .menu-open span {
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1.5px;
+    margin-left: -20px;
+    background-color: #fff;
+    font-weight: bold;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  .burger-menu .menu-open span.burger1 {
+    transform: translate3d(0px, -10px, 0px);
+  }
+  .burger-menu .menu-open span.burger2 {
+    transform: translate3d(0px, 0px, 0px);
+    transition: 0.1s;
+  }
+  .burger-menu .menu-open span.burger3 {
+    transform: translate3d(0px, 10px, 0px);
+  }
+  .burger-menu .menu-check:checked + .menu-open {
+    background: #fff;
+    border: 0;
+  }
+  .burger-menu .menu-check:checked + .menu-open span {
+    background-color: #6BAC5F;
+  }
+  .burger-menu .menu-check:checked + .menu-open span.burger1 {
+    transform: translate3d(0px, -10px, 0px) rotate(-45deg);
+    width: 30px;
+  }
+  .burger-menu .menu-check:checked + .menu-open span.burger2 {
+    opacity: 0;
+  }
+  .burger-menu .menu-check:checked + .menu-open span.burger3 {
+    transform: translate3d(0px, 10px, 0px) rotate(45deg);
+    width: 30px;
+  }
+ 
+  .burger-menu .menu-options {
+        background-color: #6BAC5F;
+        position: absolute;
+        width: 0;
+        top: 0;
+        left: 0;
+        padding: 80px 0px 50px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+  
+  .burger-menu .menu-options li {
+    color: #fff;
+    text-align: center;
+    list-style: none;
+    display: block;
+    font-weight: normal;
+    margin-top: 35%;
+  }
+
+   .burger-menu .menu-options li a img{
+    color: #fff;
+    line-height: 4em;
+    width: 65px;
+    /*margin-top: 13%*/;
+    transition: 0.5s;
+    }
+  .burger-menu .menu-options li a:hover {
+    background: #6BAC5F;
+  }
+  .burger-menu .menu-options li.search {
+    margin-bottom: 1em;
+  }
+  .burger-menu .menu-options li.search .search-box {
+    width: 300px;
+    height: 35px;
+    font-size: 1em;
+    color: #6BAC5F;
+    padding: 0 15px;
+    font-weight: lighter;
+  }
+  .burger-menu .menu-check:checked ~ .menu-options {
+    width: 15%;
+    opacity: 1;
+    height: 100vh;
+  }

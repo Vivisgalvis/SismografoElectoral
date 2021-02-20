@@ -1,0 +1,14 @@
+.container-logo-small {
+    position: absolute;
+    top: 5%; 
+    left: 5%;
+    width: 30%;
+    height: 150px;
+}
+
+.logo-small {
+    margin: 0 0 1rem 0;
+    width:40%
+}
+
+

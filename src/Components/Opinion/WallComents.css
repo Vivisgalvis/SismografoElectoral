@@ -1,0 +1,32 @@
+.container-wallComents {
+  background-color: #828282;
+  position: relative;
+  margin-top: -8%;
+  width: 50%;
+  height: 26vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 11%;
+}
+
+.input-wall {
+  width: 80%;
+  border-radius: 20px;
+  height: 7vh;
+  margin-left: 3%;
+}
+
+.user-pic {
+  padding-top: 6%;
+}
+.icon-user {
+  transform: rotate(360deg);
+  font-size: 2.5rem;
+  margin-left: 5%;
+}
+
+.files {
+  margin-top: 5%;
+  margin-left: 15%;
+}

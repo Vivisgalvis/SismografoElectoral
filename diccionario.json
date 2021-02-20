@@ -1,0 +1,43 @@
+{"diccionario":{
+    "temas":["Corporativo",
+            "Litigios",
+            "Contratos",
+            "Opiniones legales y asesoria", 
+            "Proyectos", 
+            "Regulaciones", 
+            "Contingencias"
+        ],
+    "tipos de entregables":[ "Opinion legal",
+                            "Informe", 
+                            "Abstencion de permiso", 
+                            "Sentencia de cobro", 
+                            "Defensa legal" 
+                        ],
+    "areas":["Gerencia de energias renovables y proyectos", 
+            "Gerencia de operaciones", 
+            "Gerencia legal", 
+            "Gerencia de contabilidad", 
+            "Gerencia de negocios", 
+            "Gerencia de proyectos", 
+            "Gerencia de finanzas", 
+            "Gerencia de comunicaciones"
+        ],
+    "tipo de opiniones":["Legal interno", 
+                        "Legal externo", 
+                        "Tecnica", 
+                        "Contable"
+                    ],
+    "nivel de autorizacion":["Gerencia con poderes", 
+                            "Directorio", 
+                            "Gerencia general"
+                        ],
+    "consideraciones":["Tributaria", 
+                        "Comercial", 
+                        "Ambiental", 
+                        "Economica", 
+                        "Politica", 
+                        "Comunitaria"
+                    ]
+}
+}
+

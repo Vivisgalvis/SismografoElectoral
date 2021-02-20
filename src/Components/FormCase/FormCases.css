@@ -1,0 +1,47 @@
+
+
+  .text {
+      color: #25282B;
+      position: relative;
+      padding-top: 6%;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: -4%;
+      margin-left: -31%;
+    }
+
+  .form-select-1{
+    padding: 1vh;
+    width: 50%;
+    
+  }
+
+  .hola2 {
+    color: red; 
+  }
+
+  .form { 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #E8E8E8;
+      width: 50%;
+      margin-left: 39vh;
+      padding: 2%;
+      height: 95vh;
+  }
+
+  .form-back {
+      background-color: #E8E8E8;
+      width: 70%;
+      justify-content: center;
+      text-align: center;
+      align-content: center;
+      margin-left: 36vh;
+      margin-top: 7vw;
+      border-radius: 2%;
+    
+  }
+  
+  

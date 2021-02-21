@@ -1,132 +1,60 @@
-import React, { Fragment, useState } from 'react';
-import Categorias from '../../../src/Categorias.json'
+import React, { Fragment, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Home.css';
+
+import Categorias from '../../../src/Categorias.json';
+
 
 const categorias = Categorias
 
 
 
-function Home() {
+function Home(props) {
 
-    const [ciudad, setCiudad] = useState()
+    const [ciudadName, setCiudadName] = useState([])
+    const [valorSelecionado, setValorSeleccionado] = useState("")
 
+    useEffect(()=>{
+        console.log('useEfect');
+        setCiudadName(categorias)
+    },[])
 
+    function handleChange (event) {
+       console.log(event.target.value); 
+       setValorSeleccionado(event.target.value)
+    }
 
-
-
-    return(
-        <Fragment>
-            
-        <div className="col">
-            <div className="row-6">
-                <h3>Pais</h3>
-                <select name="pais" id="selPais">
-                    <option value="defaul"></option>
-                    <option value="">Colombia</option>
-                </select>
-            </div>
-            <div className="row-6">
-                <h3>Ciudad</h3>
-                <select name="ciudad" id="selCiudad">
-                    <option value="defaul">  </option>
-                    {
-                        categorias.map((item)=>(
-                            <option value="">{item.name}</option>
-                        ))
-                    }
-                </select>
-            </div>
-        </div>
-        <button><link to="/start"></link>Continuar</button>
-        </Fragment>
-    )
-    
-}
- export default Home;
-
-/* function useCiudad () {
-    const [ciudad, setCiudad] = useState ([])
-
-    useEffect(() =>{
-        fetch("./Categorias.json")
-        .then(response => response.json)
-        .then(datos =>{
-            setCiudad(datos.ciudad)
-        })
-    }, [])
-    return ciudad
-}
-
-export default function Home(){
-
-    const ciudad = useCiudad()
-
-    return(
-
-        <Fragment>
-            <header>
-            <h1> Sismografo Electoral</h1>
-        </header>
-
-        <div className="form-back">
-            <form className="form">
-                <div className="container m2">
-                    <label htmlFor="">Pais</label>
-                    <select className="custom-select">
-                        <option value="defaul" disabled> </option>
-                        <option value="2">Colombia</option>
-                    </select>
-                </div>
-                <div className="container m2">
-                    <label htmlFor="">Ciudad</label>
-                    {ciudad.map(item => (
-                    
-                    <select className="custom-select">
-                         <option value="defaul" disabled> </option>
-                         <option value="1">{item.name}</option>
-                     </select>
-
-                    ))}
-                   
-                </div>
-            </form>
-        </div>
-        </Fragment>
-        
-
-    )
-}
- */
-
-
-
-/* const FormCases = () =>{
     return (
         <Fragment>
-            <header>
-            <h1> Sismografo Electoral</h1>
-        </header>
-
-        <div className="form-back">
-            <form className="form">
-                <div className="container m2">
-                    <label htmlFor="">Pais</label>
-                    <select className="custom-select">
-                        <option selected> </option>
-                        <option value="2">Colombia</option>
-                    </select>
+            <div className="containerForm">
+                <div className="col">
+                    <div className="row-6">
+                        <h3>Pais</h3>
+                        <select name="pais" id="selPais" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option value="defaul"></option>
+                            <option value="">Colombia</option>
+                        </select>
+                    </div>
+                    <div className="row-6">
+                        <h3>Ciudad</h3>
+                        <select onChange={handleChange} value={valorSelecionado} name="ciudad" id="selCiudad" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option value="defaul">  </option>
+                            {
+                                ciudadName.map((item) => (
+                                    <option value={item.name}>{item.name}</option>
+                                ))
+                            }
+                        </select>
+                    </div>
+                    <Link to={{ pathname: "/Start", state: { ciudad:valorSelecionado} }}>
+                        <button>Continuar</button>
+                    </Link>
                 </div>
-                <div className="container m2">
-                    <label htmlFor="">Ciudad</label>
-                    <select className="custom-select">
-                        <option selected> </option>
-                        <option value="1"></option>
-                    </select>
-                </div>
-            </form>
-        </div>
+                
+            </div>
         </Fragment>
-        
-    );
-};
+    )
 
-export default FormCases; */
+}
+export default Home;
+

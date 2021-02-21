@@ -1,0 +1,20 @@
+.containerForm{
+    display: flex;
+    justify-content: space-around;
+    height: 329px;
+    border: #9e9a9a42 groove;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.582);
+    transition: 350ms all;
+    cursor: pointer;
+    filter: contrast(85%);
+    position: relative;
+    margin: 45px 54px 0px 50px;
+}
+
+select{
+    width: 60%;
+}
+

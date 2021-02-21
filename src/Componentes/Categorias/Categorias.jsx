@@ -1,11 +1,15 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import FormCategorias from '../../../src/Categorias.json'
 
 const formCategorias = FormCategorias
 
 function Categorias() {
 
-    const [categoria, setCategoria] = useState()
+    const [categoria, setCategoria] = useState([])
+
+    useEffect(()=>{
+        setCategoria(formCategorias)
+    })
 
     return(
         <Fragment>
@@ -18,7 +22,7 @@ function Categorias() {
 
                 </div>
                 {
-                    formCategorias.map((item)=>(
+                    categoria.map((item)=>(
                         item.categories.map((res)=>(
                             <button>{res.name}</button>
                         ))

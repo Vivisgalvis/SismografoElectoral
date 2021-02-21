@@ -36,7 +36,7 @@ function Home() {
                 </select>
             </div>
         </div>
-        <button>Continuar</button>
+        <button><link to="/start"></link>Continuar</button>
         </Fragment>
     )
     

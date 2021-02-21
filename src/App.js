@@ -4,13 +4,14 @@ import { Fragment } from 'react';
 
 import Home from "./Componentes/Home/Home";
 import Candidatos from "./Componentes/Candidatos/Candidatos"
+import Categorias from "./Componentes/Categorias/Categorias"
 
 
 function App() {
   return (
     <Fragment>
       <header>
-                <h1>Sismografo Electoral</h1>
+                <h1>Sismógrafo Electoral</h1>
       </header>
       <mat-horizontal-steper>
       <div className="mat-horizontal-header-container">
@@ -38,8 +39,14 @@ function App() {
         <Route path="/" exact>
           <Home/>
         </Route>
-        <Route path="/start" exact>
+        <Route path="/Start" exact>
           <Candidatos/>
+        </Route>
+        <Route path="/Cand" exact>
+          <Candidatos/>
+        </Route>
+        <Route path="/Cate" exact>
+          <Categorias/>
         </Route>
       </Switch>
     </Router>

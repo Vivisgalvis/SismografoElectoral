@@ -1,9 +1,13 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import FormCategorias from '../../../src/Categorias.json'
+import { useLocation } from 'react-router-dom';
 
 const formCategorias = FormCategorias
 
-function Categorias() {
+function Categorias(props) {
+    const location = useLocation();
+
+console.log(location.state.ciudad);
 
     const [categoria, setCategoria] = useState([])
 

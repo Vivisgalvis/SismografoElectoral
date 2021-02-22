@@ -6,6 +6,7 @@ import { Fragment } from 'react';
 import Home from "./Componentes/Home/Home";
 import Candidatos from "./Componentes/Candidatos/Candidatos"
 import Categorias from "./Componentes/Categorias/Categorias"
+import DashBoard from './Componentes/DashBoard/Dashboard';
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
         </Route>
         <Route path="/Cate" exact>
           <Categorias/>
+        </Route>
+        <Route path="/Dash" exact>
+          <DashBoard/>
         </Route>
       </Switch>
     </Router>

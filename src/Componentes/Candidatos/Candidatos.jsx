@@ -10,13 +10,13 @@ const formCandidatos = FormCandidatos;
 function Candidatos(props) {
     const location = useLocation();
 
-console.log(location.state.ciudad);
+//console.log(location.state.ciudad);
 
     const [pregunta, setPregunta] = useState([])
 
-    let selCandidatos = formCandidatos.map((item) => (
+    /* let selCandidatos = formCandidatos.map((item) => (
         item.id
-    ))
+    )) */
         useEffect(()=>{
             setPregunta(preguntas)
         },[])
@@ -29,7 +29,7 @@ console.log(location.state.ciudad);
                     {/* <h3>Seleccione una pregunta</h3> */}
                 </div>
                 <div class="form-floating">
-                    <select name="pregunta" id="selPregunta" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <select name="preguntaC" id="selPregunta" class="form-select" id="floatingSelect" aria-label="Floating label select example">
                         <option value="default" placeholder="Seleccione Pregunta"></option>
                         {
                             pregunta.map((item) => (

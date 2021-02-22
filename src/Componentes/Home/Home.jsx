@@ -9,18 +9,18 @@ const categorias = Categorias
 
 
 
-function Home(props) {
+function Home() {
 
     const [ciudadName, setCiudadName] = useState([])
     const [valorSelecionado, setValorSeleccionado] = useState("")
 
     useEffect(()=>{
-        console.log('useEfect');
+        //console.log('useEfect');
         setCiudadName(categorias)
     },[])
 
     function handleChange (event) {
-       console.log(event.target.value); 
+       //console.log(event.target.value); 
        setValorSeleccionado(event.target.value)
     }
 

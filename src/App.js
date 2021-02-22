@@ -44,9 +44,7 @@ function App() {
         <Route path="/Start" exact>
           <Candidatos/>
         </Route>
-        <Route path="/Cand" exact>
-          <Candidatos/>
-        </Route>
+       
         <Route path="/Cate" exact>
           <Categorias/>
         </Route>

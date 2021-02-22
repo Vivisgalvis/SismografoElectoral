@@ -5,9 +5,9 @@ import { useLocation } from 'react-router-dom';
 const formCategorias = FormCategorias
 
 function Categorias(props) {
-    const location = useLocation();
+   /*  const location = useLocation();
 
-console.log(location.state.ciudad);
+console.log(location.state.ciudad); */
 
     const [categoria, setCategoria] = useState([])
 
